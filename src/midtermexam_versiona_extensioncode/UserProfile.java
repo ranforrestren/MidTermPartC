@@ -12,20 +12,21 @@ package midtermexam_versiona_extensioncode;
  * Students are reminded to add themselves as modifiers when editing the
  * code.
  * @author dancye, 2019
+ * @student renra, 2023
  */
 public class UserProfile 
 {
     
     private String userID;//the userID
-    private String genre;// the user's preferred genre of movie
-    private String[] genres = {"Comedy", "Drama", "Action", "Mystery"};//available genres of movies
+    private genre genre;// the user's preferred genre of movie
+    public enum genre {Comedy, Drama, Action, Mystery};//available genres of movies
     
     /**
      * A constructor that takes in the userID and the favourite genre
      * @param givenID the ID to assign to this user
      * @param givenGenre the users favourite genre
      */
-    public UserProfile(String givenID, String givenGenre)
+    public UserProfile(String givenID, genre givenGenre)
     {
         userID = givenID;
         genre= givenGenre;
@@ -50,14 +51,14 @@ public class UserProfile
      * A getter for the genre
      * @return the genre
      */
-    public String getGenre() {
+    public genre getGenre() {
         return genre;
     }
 
     /**
      * @param genre the genre to set
      */
-    public void setGenre(String genre) {
+    public void setGenre(genre genre) {
         this.genre = genre;
     }
     
